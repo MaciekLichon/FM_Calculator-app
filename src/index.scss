@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-league font-bold leading-none;
+    }
+
+    .key {
+        @apply h-16 rounded-[5px] text-keyS flex items-center justify-center -tracking-[0.333px] shadow-keyShadow md:text-keyL;
+    }
+
+    main.regular, main.light, main.dark {
+        @apply dark:bg-dark-bg;
+
+        .nav {
+            @apply dark:text-dark-textDisplay;
+
+            &__selector {
+                @apply dark:bg-dark-bgKeyboard;
+            }
+        }
+
+        .display {
+            @apply dark:bg-dark-bgDisplay dark:text-dark-textDisplay;
+        }
+
+        .keyboard {
+            @apply dark:bg-dark-bgKeyboard;
+        }
+
+        .key {
+            @apply dark:bg-dark-bgKey dark:text-dark-textKeys dark:shadow-dark-keyShadow transition dark:hover:bg-dark-keyHover;
+
+            &__reset {
+                @apply dark:bg-dark-keyReset dark:shadow-dark-keyShadowReset dark:text-regular-textDisplay dark:transition dark:hover:bg-dark-keyResetHover;
+            }
+
+            &__submit {
+                @apply dark:bg-dark-keySubmit dark:shadow-dark-keyShadowSubmit dark:text-dark-textKeySubmit dark:transition dark:hover:bg-dark-keySubmitHover;
+            }
+        }
+    }
+
+
+    .regular {
+        @apply bg-regular-bg;
+
+        .nav {
+            @apply text-regular-textDisplay;
+
+            &__selector {
+                @apply bg-regular-bgKeyboard;
+            }
+        }
+
+        .display {
+            @apply bg-regular-bgDisplay text-regular-textDisplay;
+        }
+
+        .keyboard {
+            @apply bg-regular-bgKeyboard;
+        }
+
+        .key {
+            @apply bg-regular-bgKey text-regular-textKeys shadow-regular-keyShadow transition hover:bg-regular-keyHover;
+
+            &__reset {
+                @apply bg-regular-keyReset shadow-regular-keyShadowReset text-regular-textDisplay transition hover:bg-regular-keyResetHover;
+            }
+
+            &__submit {
+                @apply bg-regular-keySubmit shadow-regular-keyShadowSubmit text-regular-textDisplay transition hover:bg-regular-keySubmitHover;
+            }
+        }
+    }
+
+    .light {
+        @apply bg-light-bg;
+
+        .nav {
+            @apply text-light-textDisplay;
+
+            &__selector {
+                @apply bg-light-bgKeyboard;
+            }
+        }
+
+        .display {
+            @apply bg-light-bgDisplay text-light-textDisplay;
+        }
+
+        .keyboard {
+            @apply bg-light-bgKeyboard;
+        }
+
+        .key {
+            @apply bg-light-bgKey text-light-textKeys shadow-light-keyShadow transition hover:bg-light-keyHover;
+
+            &__reset {
+                @apply bg-light-keyReset shadow-light-keyShadowReset text-regular-textDisplay transition hover:bg-light-keyResetHover;
+            }
+
+            &__submit {
+                @apply bg-light-keySubmit shadow-light-keyShadowSubmit text-regular-textDisplay transition hover:bg-light-keySubmitHover;
+            }
+        }
+    }
+    
+    .dark {
+        @apply bg-dark-bg;
+
+        .nav {
+            @apply text-dark-textDisplay;
+
+            &__selector {
+                @apply bg-dark-bgKeyboard;
+            }
+        }
+
+        .display {
+            @apply bg-dark-bgDisplay text-dark-textDisplay;
+        }
+
+        .keyboard {
+            @apply bg-dark-bgKeyboard;
+        }
+
+        .key {
+            @apply bg-dark-bgKey text-dark-textKeys shadow-dark-keyShadow transition hover:bg-dark-keyHover;
+
+            &__reset {
+                @apply bg-dark-keyReset shadow-dark-keyShadowReset text-regular-textDisplay transition hover:bg-dark-keyResetHover;
+            }
+
+            &__submit {
+                @apply bg-dark-keySubmit shadow-dark-keyShadowSubmit text-dark-textKeySubmit transition hover:bg-dark-keySubmitHover;
+            }
+        }
+    }
+}
